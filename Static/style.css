@@ -1,0 +1,166 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+@media only screen and(max-width:600px) {
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.body {
+  font-family: "Rubik", sans-serif;
+}
+
+.header {
+  font-size: 60px;
+  margin-bottom: 0.5em;
+  color:#F1D302;
+}
+
+@media only screen and(max-width: 600px) {
+  .header {
+    font-size: 10px;
+    color:#F1D302;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  /* background: #56494C; */
+  background: slategray;
+}
+
+h2 {
+  margin-top: 1em;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+@media only screen and(max-width:600px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+
+.game_board {
+  display: grid;
+  height: 320px;
+  width: 320px;
+  grid-template-columns: auto auto auto;
+}
+
+.cell {
+  height: 110px;
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 50px;
+  border: 3px solid snow;
+  transition: background 0.3s ease-in-out;
+}
+
+.cell:hover {
+  cursor: pointer;
+  /* background: #EAD7D1; */
+  background: #C7F0BD;
+}
+
+#cell_0,
+#cell_1,
+#cell_2 {
+  border-top: none;
+}
+
+#cell_0,
+#cell_3,
+#cell_6 {
+  border-left: none;
+}
+
+#cell_6,
+#cell_7,
+#cell_8 {
+  border-bottom: none;
+}
+
+#cell_2,
+#cell_5,
+#cell_8 {
+  border-right: none;
+}
+
+.locked:hover {
+  background: #FF1B1C;
+}
+
+.humanWin {
+  color: #E1DABD;
+}
+
+.compWin {
+  color: #F2F230;
+}
+
+.draw {
+  color: rgb(205, 133, 63);
+}
+
+.win {
+  background: rgb(0, 255, 127);
+}
+.win:hover {
+  bottom: rgb(0, 255, 127);
+}
+
+button {
+  background: none;
+  font-weight: 700;
+  font-size: 20px;
+  outline: none;
+  color: black;
+  border: 4px solid #5EFC8D;
+  transition: all 0.3s ease-in-out;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background: #C9F299;
+  color: black;
+}
+
+.social {
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.fa-twitter {
+  color: rgb(0, 0, 255);
+  font-size: 30px;
+}
+
+.fa-instagram {
+  font-size: 35px;
+  background: linear-gradient(rgb(128, 0, 128), rgb(255, 165, 0));
+  border-radius: 25%;
+  border: none;
+}
+
+.fa-github {
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+}
+
+.fa-linkedin {
+  font-size: 35px;
+  color: rgb(65, 105, 225);
+}
